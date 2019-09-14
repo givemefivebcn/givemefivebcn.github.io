@@ -1,18 +1,336 @@
-<!DOCTYPE html>
+<!doctype html>
+<html lang="en">
 
-<html>
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-  <title>my-first-website</title>
-  <LINK href="styles.css" rel="stylesheet" type="text/css">
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+  <title>Give Me Five BCN - Nail Salon - Ofrecemos tratamientos de uñas únicos y exclusivos. - Via Augusta 166</title>
+
+  <meta name="apple-mobile-web-app-title" content="GiveMeFive" />
+
+  <link rel="apple-touch-icon" sizes="57x57" href="favicons/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="favicons/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="favicons/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="favicons/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="favicons/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="favicons/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="favicons/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="favicons/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicons/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="favicons/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+  <link rel="manifest" href="favicons/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+
+  <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+  <script>
+    var scroll = new SmoothScroll('a[href*="#"]', {
+      speed: 1000,
+      easing: 'easeInOutCubic',
+    });
+  </script>
+
+  <style type="text/css">
+    @font-face {
+      font-family: "gmf-font";
+      src: url("./fonts/font.eot");
+      /* IE9 Compat Modes */
+      src: url("./fonts/font.eot?#iefix") format("embedded-opentype"),
+        /* IE6-IE8 */
+        url("./fonts/font.otf") format("opentype"),
+        /* Open Type Font */
+        url("./fonts/font.svg") format("svg"),
+        /* Legacy iOS */
+        url("./fonts/font.ttf") format("truetype"),
+        /* Safari, Android, iOS */
+        url("./fonts/font.woff") format("woff"),
+        /* Modern Browsers */
+        url("./fonts/font.woff2") format("woff2");
+      /* Modern Browsers */
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      background-color: #B0DDD0;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding-top: 24px;
+      padding-bottom: 24px;
+    }
+
+    a {
+      color: #4a4a41;
+    }
+
+    a:hover {
+      color: rgb(200, 200, 200);
+      text-decoration: none;
+    }
+
+    img {
+      margin: 20px;
+      width: 500px;
+      height: 500px;
+    }
+
+    #nosotros {
+      background-image: url('bg-paint.jpg');
+    }
+
+    #servicios {
+      background-image: url('bg-nails.jpg');
+    }
+
+    #contacto {
+      background-image: url('bg-map.jpg');
+    }
+
+    section {
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-color: #ffffff;
+    }
+
+    article {
+      height: 280px;
+      font-family: 'gmf-font', Arial, sans-serif;
+      font-weight: bold;
+      letter-spacing: 0px;
+      line-height: 1;
+      padding: 20px;
+      padding-top: 40px;
+      padding-bottom: 40px;
+      font-size: 26px;
+      color: #ffffff;
+    }
+
+    .bg-green {
+      background-color: #B0DDD0;
+    }
+
+    .bg-red {
+      background-color: #F59593;
+    }
+
+    .bg-yellow {
+      background-color: #F1CE80;
+    }
+
+    #contact a {
+      color: rgb(255, 255, 255);
+      text-decoration: none;
+    }
+
+    #contact a:hover {
+      color: rgb(240, 240, 240);
+    }
+
+    #arrow {
+      position: fixed;
+      bottom: 10px;
+      right: 10px;
+    }
+
+    #arrow img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .social_icons_img {
+      width: 24px;
+      height: 24px;
+      margin: 0;
+      margin-right: 10px;
+    }
+
+    @media only screen and (max-width: 1000px) {
+      header nav {
+        text-align: center;
+      }
+
+      #lang {
+        padding-top: 10px;
+      }
+
+      img {
+        width: 200px;
+        height: 200px;
+        margin-right: 0;
+      }
+
+      .move-rigth {
+        text-align: right;
+        padding-right: 0;
+      }
+
+      section {
+        background-size: cover;
+      }
+
+      article {
+        height: 300px;
+      }
+
+      article div {
+        font-size: 18px;
+        padding-bottom: 20px;
+      }
+    }
+
+    @media only screen and (min-width: 650px) and (max-width: 1000px) {
+      article {
+        height: 200px;
+      }
+    }
+
+    @media only screen and (max-width: 250px) {
+      img {
+        width: 150px;
+        height: 150px;
+      }
+    }
+  </style>
 </head>
 
-<body>
+<body class="container-fluid">
+  <header class="row">
+    <nav class="col-md-10 col-sm-12">
+      <a data-scroll class="col-md-3" href="#nosotros" id="nosotros_btn">Nosotros</a>
+      <a data-scroll class="col-md-3" href="#servicios" id="servicios_btn">Servicios</a>
+      <a data-scroll class="col-md-3" href="#contacto" id="contacto_btn">Contacto</a>
+    </nav>
+    <nav id="lang" class="col-md-2">
+      <a id="es_btn" href="#es">ES</a> /
+      <a id="en_btn" href="#en">EN</a> /
+      <a id="fr_btn" href="#fr">FR</a>
+    </nav>
+  </header>
+  <section class="row" id="nosotros">
+    <div class="col-md-3">
+      <img src="logo-green.png">
+    </div>
+  </section>
+  <article class="row bg-green">
+    <div id="nosotros_text_1" class="col-md-2">Trabajamos con productos de alta gama y seguimos las tendencias del
+      momento.</div>
+    <div id="nosotros_text_2" class="col-md-2 offset-md-1">Ofrecemos tratamientos de uñas únicos y exclusivos.</div>
+  </article>
+  <section class="row" id="servicios">
+    <div class="col-md-6"></div>
+    <div class="col-md-3 move-rigth">
+      <img src="logo-red.png">
+    </div>
+  </section>
+  <article class="row bg-red">
+    <div id="servico_text" class="col-md-4">Manicura por 11,90€<br>Pedicura por 16,90€<br>Uñas acrílicas por 35€<br>Uñas
+      de gel por 35€</div>
+  </article>
 
-<img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" id="octocat" alt="octocat-gif" />
+  <section class="row" id="contacto">
+    <div class="col-md-6"></div>
+    <div class="col-md-3 move-rigth">
+      <a href="https://goo.gl/maps/cPZdQ7orJER8w9JX8"><img src="logo-yellow.png"></a>
+    </div>
+  </section>
+  <article class="row bg-yellow">
+    <div id='contact' class="col-md-3">
+      <a href="https://goo.gl/maps/cPZdQ7orJER8w9JX8">Via Augusta 166, bajos</a><br>
+      <a href="https://goo.gl/maps/cPZdQ7orJER8w9JX8">08006 Barcelona</a><br>
+      <a href="tel:+34931971776">+34 931 971 776</a><br>
+      <a href="tel:+34722340573">+34 722 340 573</a><br>
+      <a href="mailto:info@givemefivebcn.com">info@givemefivebcn.com</a><br>
+      <a href="https://www.instagram.com/givemefivebcn"><img class="social_icons_img"
+          src="instagram.png">@givemefivebcn</a>
+    </div>
+    <!--<div id="social_icons" class="col-md-3 offset-md-1">
+      <a href="https://www.instagram.com/givemefivebcn"><img class="social_icons_img" src="instagram.png"></a>
+      <a href="https://www.instagram.com/givemefivebcn"><img class="social_icons_img" src="instagram.png"></a>
+      <a href="https://www.instagram.com/givemefivebcn"><img class="social_icons_img" src="instagram.png"></a>
+    </div>-->
+  </article>
 
-<!-- Change this code here by copy and pasting your template on line 15 -->
-<p>Welcome to your first GitHub Pages website!</p>
+  <a id="arrow" href="#"><img src="arrow.png"></a>
 
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+
+  <script>
+    document.getElementById("contacto").onclick = function () {
+      window.location.href = 'https://goo.gl/maps/cPZdQ7orJER8w9JX8';
+    };
+
+    $('#es_btn').click(function () {
+      $("#nosotros_btn").html("Nosotros");
+      $("#servicios_btn").html("Servicios");
+      $("#contacto_btn").html("Contacto");
+      $("#nosotros_text_1").html("Trabajamos con productos de alta gama y seguimos las tendencias del momento.");
+      $("#nosotros_text_2").html("Ofrecemos tratamientos únicos y exclusivos.");
+      $("#servico_text").html("Manicura por 11,90€<br>Pedicura por 16,90€<br>Uñas acrílicas por 35€<br>Uñas de gel por 35€");
+    });
+
+    $('#en_btn').click(function () {
+      $("#nosotros_btn").html("About us");
+      $("#servicios_btn").html("Services");
+      $("#contacto_btn").html("Contact");
+      $("#nosotros_text_1").html("We work with high-end products and follow the trends of the moment.");
+      $("#nosotros_text_2").html("We offer unique and exclusive treatments.");
+      $("#servico_text").html("Manicure for €11.90<br>Pedicure for €16.90<br>Acrylic nails for €35<br>Gel nails for € 35");
+    });
+
+    $('#fr_btn').click(function () {
+      $("#nosotros_btn").html("À propos de nous");
+      $("#servicios_btn").html("Les services");
+      $("#contacto_btn").html("Contact");
+      $("#nosotros_text_1").html("Nous travaillons avec des produits haut de gamme et suivons les tendances du moment.");
+      $("#nosotros_text_2").html("Nous offrons des traitements uniques et exclusifs.");
+      $("#servico_text").html("Manucure à 11,90€<br>Pédicure à 16,90€<br>Ongles en acrylique à 35€<br>Ongles en gel à 35€");
+    });
+
+    var url = String(window.location);
+    var idx = url.indexOf("#");
+    var hash = idx != -1 ? url.substring(idx + 1) : "";
+    console.log(hash);
+    if (hash === "es") $('#es_btn').click();
+    if (hash === "en") $('#en_btn').click();
+    if (hash === "fr") $('#fr_btn').click();
+
+    $('#arrow').click(function (e) {
+      e.preventDefault();
+      window.scrollBy(0, 800);
+    });
+
+  </script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-147713365-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-147713365-1');
+  </script>
 </body>
 </html>
