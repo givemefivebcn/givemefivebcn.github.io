@@ -276,6 +276,8 @@
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
     crossorigin="anonymous"></script>
 
+  <script src="cookie.notice.min.js"></script>
+
   <script>
     document.getElementById("contacto").onclick = function () {
       window.location.href = 'https://goo.gl/maps/cPZdQ7orJER8w9JX8';
@@ -321,6 +323,27 @@
       window.scrollBy(0, 800);
     });
 
+
+    new cookieNoticeJS({
+      // Localizations of the notice message
+      'messageLocales': {
+        'it': 'Custom localized message'
+      },
+      // Localizations of the dismiss button text
+      'buttonLocales': {
+        'it': 'Chiudi'
+      },
+      'cookieNoticePosition': 'bottom',
+      'learnMoreLinkEnabled': false,
+      'expiresIn': 30,
+      'buttonBgColor': '#B0DDD0',
+      'buttonTextColor': '#fff',
+      'noticeBgColor': '#fff',
+      'noticeTextColor': '#000',
+      'linkColor': '#f00'
+    });
+  </script>
+
   </script>
 
   <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -333,4 +356,5 @@
     gtag('config', 'UA-147713365-1');
   </script>
 </body>
+
 </html>
