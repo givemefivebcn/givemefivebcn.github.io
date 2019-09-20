@@ -109,7 +109,8 @@
     }
 
     article {
-      height: 280px;
+      /*height: 280px;*/
+      height: 100%;
       font-family: 'gmf-font', Arial, sans-serif;
       font-weight: bold;
       letter-spacing: 0px;
@@ -120,6 +121,47 @@
       font-size: 26px;
       color: #ffffff;
     }
+
+    article h2 {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    article h3 {
+      font-size: 26px;
+      font-weight: bold;
+    }
+
+
+    @media only screen and (max-width: 392px) {
+      article p {
+        font-size: 11px;
+        font-weight: normal;
+      }
+
+      article p b {
+        font-size: 15px;
+        font-style: italic;  
+        margin-top: 10px;
+      }
+
+    }
+
+    @media only screen and (min-width: 393px) {
+      article p {
+        font-size: 15px;
+        font-weight: normal;
+      }
+
+      article p b {
+        font-size: 15px;
+        font-style: italic;  
+        margin-top: 10px;
+      }
+
+    }
+
+    
 
     .bg-green {
       background-color: #B0DDD0;
@@ -185,7 +227,8 @@
       }
 
       article {
-        height: 300px;
+        /*height: 300px;*/
+        height: 100%;
       }
 
       article div {
@@ -196,7 +239,8 @@
 
     @media only screen and (min-width: 650px) and (max-width: 1000px) {
       article {
-        height: 200px;
+        /*height: 200px;*/
+        height: 100%;
       }
     }
 
@@ -239,8 +283,91 @@
     </div>
   </section>
   <article class="row bg-red">
-    <div id="servico_text" class="col-md-4">Manicura por 11,90€<br>Pedicura por 16,90€<br>Uñas acrílicas por 35€<br>Uñas
-      de gel por 35€</div>
+    <div id="servico_text" class="col-md-12">
+
+      <h3>NUESTROS SERVICIOS</h3>
+
+      <br/>
+
+      <h2>BELLEZA MANOS</h2>
+      <div class="row">
+        <div class="col-md-5">
+          <p><b>ESMALTE SEMIPERMANENTE</b></p>
+          <p>ESMALTADO SEMIPERMANENTE..................................................................11,90€ <br/> (LIMAR UÑAS, EMPUJAR CUTICULAS Y ESMALTAR)</p>
+          <p>MANICURA COMPLETA SEMIPERMANENTE..................................................25,00€  <br/> (LIMAR UÑAS, RETIRAR CUTICULAS, ESMALTAR, TRATAMIENTO DE PARAFINA, MASAJE)</p>
+          <p>ESMALTAR 10 UÑAS EN COLOR DIFFERENTE.............................................15,90€  <br/>  (RETIRAR PRODUCTO, LIMAR UÑAS, EMPUJAR CUTÍCULA Y FINALIZAMOS CON UNA BASE DE VITAMINAS)</p> 
+          <p>RETIRAR SEMIPERMANENTE.........................................................................10,00€ <br/> (RETIRAR PRODUCTO, LIMAR UÑAS, PULIR CUTICULAS, FINALIZAMOS CON BASE DE VITAMINA)</p>
+          <p>RETIRAR SEMIPERMANENTE + ESMALTADO TRADICIONAL....................15,90€   <br/>  (RETIRAR PRODUCTO, LIMAR UÑAS, EMPUJAR CUTÍCULAS Y FINALIZAMOS CON UN ESMALTE DE COLOR)</p>
+          <p>REPARACIÓN UNA UÑA SEMIPERMANENTE...................................................1,50€</p>
+        </div>
+
+        <div class="offset-md-1 col-md-5">
+          <p><b>ESMALTE TRADICIONAL</b></p>
+          <p>ESMALTADO COLOR.........................................................................................9,90€ <br/> (LIMAR UÑAS, EMPUJAR CUTICULAS Y ESMALTAR)</p>
+          <p>MANICURA COMPLETA ESMALTE TRADICIONAL........................................19,90€ <br/> (LIMAR UÑAS, RETIRAR CUTICULAS, ESMALTAR, TRATAMIENTO DE PARAFINA, MASAJE)</p>
+        </div>
+      </div>
+
+        <br/>
+
+
+
+        <div class="row">
+            <div class="col-md-5">
+                <h2>BELLEZA PIES</h2>
+                <p>ESMALTADO SEMIPERMANENTE PIES........................................................16,90€ <br/> (LIMAR UÑAS, EMPUJAR CUTICULAS Y ESMALTAR)</p>
+                <p>PEDICURA COMPLETA SEMIPERMANENTE.................................................35,90€ <br/> (LIMAR UÑAS, RETIRAR CUTICULAS, REBAJAR DUREZAS, ESMALTAR, EXFOLIACIÓN CON MASAJE FINAL)</p>
+                <p>RETIRAR SEMIPERMANENTE.........................................................................10,00€ <br/> (RETIRAR PRODUCTO, LIMAR UÑAS, PULIR CUTÍCULA Y FINALIZAMOS CON TRATAMIENTO DE VITAMINAS)</p>
+                <p>RETIRAR SEMIPERMANENTE + ESMALTADO TRADICIONAL...................17,90€ <br/> (RETIRAR PRODUCTO, LIMAR UÑAS, PULIR CUTÍCULA Y FINALIZAMOS CON UN TRATAMIENTO DE VITAMNIAS)</p>
+                
+                <p>ESMALTADO TRADICIONAL PIES..................................................................13,00€ <br/> (LIMAR UÑAS, EMPUJAR CUTÍCULA Y ESMALTAR)</p>
+                <p>PEDICURA COMPLETA ESMASLTE TRADICIONAL......................................25,90€ <br/> (CORTAR, LIMAR UÑAS, RETIRAR CUTÍCULAS, REBAJAR DUREZAS, ESMALTAR EXFOLIACIÓN CON MASAJE FINAL)</p>
+                
+                <p>PEDICURA MAN COMPLETA............................................................................25,00€ <br/> (CORTAR, LIMAR UÑAS, RETIRAR CUTÍCULAS, REBAJAR DUREZAS, EXFOLIACIÓN CON MASAJE FINAL)</p>
+                <p>PEDICURA KIDS...................................................................................................9,00€</p>
+            </div>
+
+            <div class="offset-md-1 col-md-5">
+                <h2>OTROS SERVICIOS</h2>
+                <p>MANICURA BÁSICA............................................................................................12,00€ <br/> (LIMAR UÑAS,CUTÍCULAS, BRILLO Y CREMA HIDRATANTE)</p>
+                <p>FRANCESA......................................................................................................3,00€</p>
+                <p>RETIRAR CUTÍCULAS.........................................................................................7,00€</p>
+                <p>MAN BÁSICA.........................................................................................................9,90€ <br/> (CORTAR UÑAS, EMPUJAR CUTÍCULA Y PULIR UÑAS)</p>
+                <p>MANICURA MAN COMPLETA.........................................................................14,90€ <br/> (CORTAR Y LIMAR UÑAS, RETIRAR CUTÍCULAS, TRATAMIENTO DE HIDRATACIÓN Y MASAJE FINAL)</p>
+                <p>MANICURA KIDS.................................................................................................9,00€</p>
+            </div>
+        </div>
+
+
+        <br/>
+
+
+        <div class="row">
+            <div class="col-md-5">
+                <h2>GEL / ACRÍLICO</h2>
+                <p>UÑAS NUEVAS GEL O ACRÍLICO + ESMALTE SEMI / TRADI.......................36,00€ <br/> (SI HAY QUE RETIRAR GEL / ACRÍLICO + 10€)</p>
+                <p>UÑAS NUEVAS XXL+ESMALTE SEMI / TRADI...............................................39,00€ <br/> (SI HAY QUE RETIRAR GEL / ACRÍLICO + 10 €)</p>
+                <p>RECONTRUCCIÓN DE UÑAS MORDIDAS.......................................................40,00€</p>
+                <p>RELLENO + ESMALTE SEMI / TRADI...............................................................32,00€</p>
+                <p>RETIRAR GEL / ACRÍLICO.................................................................................20,00€</p>
+                <p>RETIRAR GEL / ACRÍLICO + ESMALTE...........................................................27,00€</p>
+                <p>UÑAS ACRÍLICAS DEDOS GRANDES PIES.........................13,00€ SOLO 1 - 7,00€</p>
+                <p>REPARACIÓN UÑA ROTA...................................................................................4,50€</p>
+            </div>
+
+            <div class="offset-md-1 col-md-5">
+                <h2>NAIL ART</h2>
+                <p>DECORACIÓN BÁSICA..........................................................................................2,50€</p>
+                <p>DECORACIÓN BÁSICA 10 UÑAS........................................................................15,90€</p>
+                <p>(ESMALTADO APARTE)</p>
+                <p>DECORACIÓN PREMIUM......................................................................................3,90€</p>
+            </div>
+        </div>
+      
+
+    </div>
+
+
   </article>
 
   <section class="row" id="contacto">
